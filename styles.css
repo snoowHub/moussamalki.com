@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  scroll-behavior: smooth;
+}
+.top-bar {
+  background-color: #ccd1e4;
+  width: 100%;
+  position: fixed;
+  z-index: 999; /*it's gonna prevent anything from showing on top of the fixed bar*/
+  display: flex; /*it's like inline-block but you need a parent container */
+  justify-content: space-between; /*spaces two child elements*/
+  align-items: center;
+  padding: 10px 100px; /*1st value for top and bottom and 2st for left and right*/
+}
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.navigation-bar a {
+  text-decoration: none;
+  color: #3a6cf4;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 30px;
+}
+.navigation-bar a:hover {
+  color: #8a39e1;
+}
+
+.main-section {
+  width: 100%;
+  min-height: 100vh; /*minimum height, it can't go below it*/
+  display: flex;
+  background: url(bbk.jpeg) no-repeat; /*background pic*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* makes the background image fixed while scrolling*/
+  display: inline-block;
+  line-height: 2;
+}
+
+.middle-content {
+  display: inline-block;
+  position: relative;
+  top: 150px;
+  left: 150px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.2rem;
+
+  padding: auto 10px;
+  letter-spacing: 1px;
+}
+
+h2 span {
+  display: block;
+  padding: auto 10px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #3a6cf4;
+}
+h3 {
+  color: #fff;
+  padding-left: 70px;
+  padding-bottom: 40px;
+}
+.mainbutton {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3a6cf4;
+  padding: 10px 30px;
+  border-radius: 15px;
+  position: relative;
+  left: 85px;
+  letter-spacing: 1px;
+}
+.mainbutton:hover {
+  background-color: #270082;
+  transition: 0.7s ease;
+}
+.icons a {
+  position: relative;
+  top: 40px;
+  left: 85px;
+  font-size: 1.7rem;
+  color: #fff;
+  padding-right: 20px;
+}
+.social :hover {
+  color: crimson;
+  transform: scale(1.1);
+  transition: 0.7s ease;
+}
+.title {
+  color: #3a6cf4;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  max-width: 40vh;
+  box-shadow: 0 5px 25px rgba(1 1 1 /25%);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.icon {
+  font-size: 4rem;
+  color: #3a6cf4;
+  text-align: center;
+}
+.card-info h2 {
+  color: #0a49f6;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 10px;
+}
+.card-info p {
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.7s ease;
+}
+.services {
+  margin-top: 40px;
+  margin-bottom: 200px;
+}
+
+.Projects {
+  background-color: #2c3333;
+  padding-bottom: 200px;
+}
+.contact {
+  margin-bottom: 200px;
+}
+
+.project-card {
+  /*for the overlay*/
+  position: relative;
+  /**/
+  min-height: 10rem;
+  width: 22rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden; /*stops the element from going over the window*/
+  margin: 20px;
+}
+
+.project-image img {
+  display: block; /* it removes a little bit of space at the bottom*/
+  width: 100%;
+}
+/*for the overlay*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+}
+.overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.project-image:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.overlay-a a {
+  text-transform: uppercase;
+  color: #3a6cf4;
+  font-weight: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 50px;
+  text-decoration: none;
+}
+
+/*for the overlay*/
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.message {
+  color: black;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 40px 20px;
+}
+.contact-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 16px;
+  border-style: none;
+  border-bottom-style: solid;
+  border-color: black;
+}
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 16px;
+  border-style: none;
+  border-bottom-style: solid;
+  border-color: black;
+  resize: none; /*in order to disable the resize property*/
+}
+.btn {
+  margin: 20px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background-color: #8bdb81;
+  border-style: none;
+  box-shadow: 0 5px 25px rgba(1 1 1 /25%);
+  transition: 0.7s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.contact-box {
+  width: 24rem;
+  height: 24rem;
+  box-shadow: 0 5px 25px rgba(1 1 1 /25%);
+  margin: 10px 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  margin-top: 80px;
+  position: relative;
+  right: 150px;
+}
+.contact-icon {
+  font-size: 1.7rem;
+  color: #0a49f6;
+  display: inline-block;
+}
+
+.contact-content {
+  color: #2c3333;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 10px;
+}
+.number {
+  color: #2c3333;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 5px;
+}
+.location {
+  color: #2c3333;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.info-cards {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #2c3333;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.final-icons {
+  display: flex;
+  justify-content: center;
+}
+.bottom-icon {
+  text-decoration: none;
+  padding-right: 30px;
+  font-size: 1.4rem;
+  color: #ccd1e4;
+  transition: 0.7s ease;
+  position: relative;
+  left: 15px;
+}
+.bottom-icon:hover {
+  transform: scale(1.1);
+  color: #fc4f4f;
+}
+.copyright {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+@media (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+  }
+ .navigation-bar a {
+ padding-left: 10px;
+
+ }
